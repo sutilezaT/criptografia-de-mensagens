@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Criptografia de Mensagens</title>
+        <link rel="stylesheet" href="./style/style.css">
+        <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon"/>
+        <script src="./script/decodificador.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <img src="./assets/logo.png" alt="Logo Page">
+        </header>
+
+        <main class="conteiner">
+            <section class="input_area">
+                <textarea class="texto_entrada" name="texto_entrada" id="campo_texto_entrada" cols="40" rows="5" placeholder="Digite seu texto aqui..."></textarea>
+
+                <div class="atencao">
+                    <img class="exclamacao" src="./assets/exclamacao.png">
+                    <span id="msg_validacao">Atenção: Apenas letras minúsculas e não acentuadas.</span>
+                </div>
+
+                <div class="btn_confg">
+                    <button class="buttons" id="btnCript" onclick="criptografar()">Criptografar</button>
+                    <button class="buttons" id="btnDescript" onclick="descriptografar()">Descriptografar</button>
+                </div>
+            </section>
+
+            <section class="output_area">
+                <div id="output_vazio">
+                    <img class="img_saida" src="./assets/cade.svg" alt="Procurado mensagens">
+                    <h2 class="ttl_saida">Mensagem não encontrada!</h2>
+                    <p class="msg_saida">Digite a mensagem que você queira criptografar ou descritografar.</p>
+                </div>
+
+                <div id="output_form">
+                    <textarea class="texto_saida" name="texto_saida" id="campo_texto_saida" cols="20" rows="10"></textarea>
+                    <button class="buttons" id="btnCopy" onclick="copiar()">Copiar</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="rodape">
+            <div class="creditos">
+                <p><ion-icon class="desktop_icon" name="desktop-outline"></ion-icon>Desenvolvido por Thais Sutil</p>
+                <p>Alura - Oracle Next Education</p>
+            </div>
+        </footer>
+    </body>
+</html>
